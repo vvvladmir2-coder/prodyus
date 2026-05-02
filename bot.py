@@ -17,7 +17,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Жми кнопку ниже:", reply_markup=reply_markup)
     else:
         await update.message.reply_text("Привет! Используй ссылку с ?startapp=open")
-
+print("Токен загружен, начинаю запуск...")
 def main():
     app = Application.builder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
