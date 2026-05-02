@@ -4,7 +4,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 
 logging.basicConfig(level=logging.INFO)
 
-TOKEN = "8439027423:AAE4VGqFfTMgXfOkueDKEWev3b0-xM9371g"
+TOKEN = "8439027423:AAEJ3-U46m7Ff2GyR1SCdDx6DQsA22uDbUg"
 URL = "https://vvvladmir2-coder.github.io/prodyus/"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
