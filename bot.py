@@ -5,8 +5,8 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-TOKEN = "8439027423:AAEJ3-U46m7Ff2GyR1SCdDx6DQsA22uDbUg"  
-URL = "https://vvvladmir2-coder.github.io/prodyus/"
+TOKEN = "8439027423:AAEJ3-U46m7Ff2GyR1SCdDx6DQsA22uDbUg"
+URL = "https://vvvladmir2-coder.github.io/prodys/"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Обрабатывает команду /start, если перешли с параметром open – показывает кнопку с Web App."""
