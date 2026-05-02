@@ -4,11 +4,11 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 
 logging.basicConfig(level=logging.INFO)
 
-TOKEN = "8439027423:AAEJ3-U46m7Ff2GyR1SCdDx6DQsA22uDbUg"
+TOKEN = "8439027423:AAEJ3-U46m7Ff2GyR1SCdDx6DQsA22uDbUg"  
 URL = "https://vvvladmir2-coder.github.io/prodyus/"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if update.message.text and "open" in update.message.text:
+    if update.message and update.message.text and "open" in update.message.text:
         keyboard = [[InlineKeyboardButton(
             text="🚀 Открыть лендинг",
             web_app=WebAppInfo(url=URL)
@@ -17,10 +17,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Жми кнопку ниже:", reply_markup=reply_markup)
     else:
         await update.message.reply_text("Привет! Используй ссылку с ?startapp=open")
-print("Токен загружен, начинаю запуск...")
+
 def main():
     app = Application.builder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
+    print("Бот запущен!")
     app.run_polling()
 
 if __name__ == "__main__":
